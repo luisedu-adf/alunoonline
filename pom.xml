@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+
+<groupId>org.example</groupId>
+<artifactId>mavenaluno</artifactId>
+<version>1.0-SNAPSHOT</version>
+<packaging>war</packaging>
+
+<properties>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+</properties>
+
+<repositories>
+		<repository>
+				<id>github</id>
+				<url>https://maven.pkg.github.com/luisedu-adf/alunoonlinemavenlib</url>
+		</repository>
+</repositories>
+
+<dependencies>
+				<!--		<dependency>-->
+						<!--<groupId>com.worksettecnologias.legacy</groupId>-->
+						<!--<artifactId>future-pages</artifactId>-->
+						<!--<version>4.0.0</version>-->
+								<!--</dependency>-->
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>futurepages4</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+		<dependency>
+				<groupId>com.thoughtworks.xstream</groupId>
+				<artifactId>xstream</artifactId>
+				<version>1.2.2</version>
+		</dependency>
+		<dependency>
+				<groupId>quartz</groupId>
+				<artifactId>quartz</artifactId>
+				<version>1.4.5</version>
+		</dependency>
+		<dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>1.0.3</version>
+		</dependency>
+		<dependency>
+				<groupId>org.jboss.spec.javax.transaction</groupId>
+				<artifactId>jboss-transaction-api_1.1_spec</artifactId>
+				<version>1.0.0.Final</version>
+		</dependency>
+		<dependency>
+				<groupId>com.sun.phobos</groupId>
+				<artifactId>jdom</artifactId>
+				<version>1.0</version>
+		</dependency>
+		<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>2.3</version>
+		</dependency>
+		<dependency>
+				<groupId>com.squareup.okio</groupId>
+				<artifactId>okio</artifactId>
+				<version>1.13.0</version>
+		</dependency>
+		<dependency>
+				<groupId>de.huxhorn.lilith</groupId>
+				<artifactId>de.huxhorn.lilith.3rdparty.flyingsaucer.core-renderer</artifactId>
+				<version>8Pre2</version>
+		</dependency>
+		<dependency>
+				<groupId>org.hibernate.javax.persistence</groupId>
+				<artifactId>hibernate-jpa-2.0-api</artifactId>
+				<version>1.0.1.Final</version>
+		</dependency>
+		<dependency>
+				<groupId>org.jboss.logging</groupId>
+				<artifactId>jboss-logging</artifactId>
+				<version>3.1.0.GA</version>
+		</dependency>
+		<dependency>
+				<groupId>taglibs</groupId>
+				<artifactId>standard</artifactId>
+				<version>1.1.2</version>
+		</dependency>
+		<dependency>
+				<groupId>antlr</groupId>
+				<artifactId>antlr</artifactId>
+				<version>2.7.7</version>
+		</dependency>
+		<dependency>
+				<groupId>com.squareup.okhttp3</groupId>
+				<artifactId>okhttp</artifactId>
+				<version>3.8.1</version>
+		</dependency>
+		<dependency>
+				<groupId>org.javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>3.15.0-GA</version>
+		</dependency>
+		<dependency>
+				<groupId>ant</groupId>
+				<artifactId>ant</artifactId>
+				<version>1.6.2</version>
+		</dependency>
+		<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.11</version>
+		</dependency>
+		<dependency>
+				<groupId>org.zenframework.z8.dependencies.commons</groupId>
+				<artifactId>dom4j-1.6.1</artifactId>
+				<version>2.0</version>
+		</dependency>
+		<dependency>
+				<groupId>com.lowagie</groupId>
+				<artifactId>itext</artifactId>
+				<version>2.0.8</version>
+		</dependency>
+		<dependency>
+				<groupId>tomcat</groupId>
+				<artifactId>commons-fileupload</artifactId>
+				<version>1.0-5.5.23</version>
+		</dependency>
+		<dependency>
+				<groupId>antlr</groupId>
+				<artifactId>antlr</artifactId>
+				<version>2.7.6</version>
+		</dependency>
+		<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>4.1.7.Final</version>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.pdfbox</groupId>
+				<artifactId>pdfbox</artifactId>
+				<version>1.4.0</version>
+		</dependency>
+		<dependency>
+				<groupId>com.yahoo.platform.yui</groupId>
+				<artifactId>yuicompressor</artifactId>
+				<version>2.4.7</version>
+		</dependency>
+		<dependency>
+				<groupId>org.hibernate.common</groupId>
+				<artifactId>hibernate-commons-annotations</artifactId>
+				<version>4.0.1.Final</version>
+		</dependency>
+		<dependency>
+				<groupId>commons-collections</groupId>
+				<artifactId>commons-collections</artifactId>
+				<version>2.1.1</version>
+		</dependency>
+		<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>2.8.1</version>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.sanselan</groupId>
+				<artifactId>sanselan</artifactId>
+				<version>0.97-incubator</version>
+		</dependency>
+
+		<!-- not found starts here -->
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>activation</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>asm-attrs</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>asm</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>bcprov-jdk16-137</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>ezmorph-0.8.1</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>htmlcompressor-1.5.3</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>core-renderer-minimal</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>itext-paulo-155</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>jgroups-all</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>jmxri</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>json</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>mail</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>json-lib-0.8</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>minium</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>mirror-1.5.1</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>pagseguro-api-2.5.2</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>tidy</artifactId>
+				<version>1.0.0</version>
+		</dependency>
+
+		<!-- not found ends here -->
+
+		<!-- tomcat lib starts here -->
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-servlet-api</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-i18n-fr</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-api</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-jsp-api</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-dbcp</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-storeconfig</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>com.test</groupId>
+				<artifactId>ecj-4.6.3</artifactId>
+				<version>1.0.0</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-catalina-ha</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-el-api</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-catalina-ant</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-util-scan</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.11</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-i18n-es</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-jdbc</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-i18n-ja</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-jasper-el</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-jasper</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-tribes</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-websocket</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-util</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-jni</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-coyote</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-catalina</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-websocket-api</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-annotations-api</artifactId>
+				<version>8.0.52</version>
+				<scope>provided</scope>
+		</dependency>
+
+		<!-- tomcat lib ends here -->
+
+</dependencies>
+
+<build>
+		<plugins>
+
+				<plugin>
+						<artifactId>maven-war-plugin</artifactId>
+						<version>3.3.1</version>
+				</plugin>
+
+		</plugins>
+</build>
+
+</project>
