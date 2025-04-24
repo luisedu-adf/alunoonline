@@ -14,11 +14,14 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Set up JDK 1.8
+    - name: Set up JDK 1.8 & authenticate to GitHub Packages
       uses: actions/setup-java@v3
       with:
         distribution: temurin
         java-version: 8
+        server-id: github
+        server-username: ${{ github.actor }}
+        server-password: ${{ secrets.GH_PACKAGES_TOKEN }}
 
     - name: Cache Maven local repository
       uses: actions/cache@v3
