@@ -54,3 +54,43 @@ jobs:
         name: alunoonline-war
         path: target/*.war
 
+           # ——— new deploy steps below ———
+
+    - name: Install SSH client
+      run: sudo apt-get update && sudo apt-get install -y openssh-client
+
+    - name: Set up SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/ecs-key.pem
+        chmod 600 ~/.ssh/ecs-key.pem
+
+   - name: Stop Tomcat
+      run: |
+        ssh -o StrictHostKeyChecking=no \
+            -i ~/.ssh/ecs-key.pem \
+            ec2-user@15.228.77.0 \
+            '/opt/tomcat8/bin/catalina.sh stop'
+
+    - name: Clean out old WAR and exploded app
+      run: |
+        ssh -o StrictHostKeyChecking=no \
+            -i ~/.ssh/ecs-key.pem \
+            ec2-user@15.228.77.0 \
+            'sudo rm -f /opt/tomcat8/webapps/*.war \
+                  && sudo rm -rf /opt/tomcat8/webapps/alunoonline'
+
+    - name: Upload new WAR
+      run: |
+        scp -o StrictHostKeyChecking=no \
+            -i ~/.ssh/ecs-key.pem \
+            target/*.war \
+            ec2-user@15.228.77.0:/opt/tomcat8/webapps/alunoonline.war
+
+    - name: Start Tomcat
+      run: |
+        ssh -o StrictHostKeyChecking=no \
+            -i ~/.ssh/ecs-key.pem \
+            ec2-user@15.228.77.0 \
+            '/opt/tomcat8/bin/catalina.sh start'
+
